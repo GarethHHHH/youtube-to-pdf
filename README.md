@@ -28,6 +28,10 @@ $ pipenv install
 
 Note: all project paths are defined inside `settings` package
 
+The application reads the environment variable `YOUTUBE_TO_PDF_SETTINGS` to
+decide which settings module to load. If this variable is not set, it defaults
+to `LOCAL`.
+
 ## How to Use
 
 - Run the following command on your machine:
