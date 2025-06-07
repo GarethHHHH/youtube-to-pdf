@@ -1,7 +1,7 @@
 import os
 
 import numpy
-from cv2 import cv2
+import cv2
 
 
 def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, length=100,

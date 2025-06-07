@@ -1,4 +1,4 @@
-from flask_restplus import reqparse
+from flask_restx import reqparse
 from youtube_to_pdf.utils import type as type_utils
 
 
