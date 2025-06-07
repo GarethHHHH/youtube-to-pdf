@@ -1,6 +1,6 @@
 import logging
 
-from flask_restplus import Namespace, fields, Resource, abort
+from flask_restx import Namespace, fields, Resource, abort
 
 from youtube_to_pdf.classes.video import ManagedApp
 from youtube_to_pdf.models.video import Video
