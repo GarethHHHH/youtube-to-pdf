@@ -6,15 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
-flask-restplus = "*"
+flask = ">=2.3"
+flask-restx = "*"
 sentry-sdk = "*"
 requests = "*"
-pytube = "*"
-opencv-python = "<=4.*"
+pytube = ">=12"
+opencv-python = ">=4.8"
 colorlog = "*"
 natsort = "*"
 fpdf = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.13.4"

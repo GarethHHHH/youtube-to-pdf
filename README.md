@@ -16,7 +16,7 @@ with the help of some frameworks (eg.: pytube), youtube-to-pdf-converter does th
 
 ## Requirements
 
-- Install Python (although that's probably installed already on your system)
+- Install Python **3.13.4** (although that's probably installed already on your system)
 
 - Install pipenv: https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv 
 (you may need to add $HOME/.local/bin to $PATH and reboot for pipenv to be recognized as a system command)
@@ -27,6 +27,10 @@ $ pipenv install
 ```
 
 Note: all project paths are defined inside `settings` package
+
+The application reads the environment variable `YOUTUBE_TO_PDF_SETTINGS` to
+decide which settings module to load. If this variable is not set, it defaults
+to `LOCAL`.
 
 ## How to Use
 
@@ -40,4 +44,12 @@ $ pipenv run python converter.py
 - Insert URL and wait. When finished, you'll have all files paths on API response
 
 ## Contributions
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Troubleshooting
+
+If video downloads fail with a `HTTP Error 400` message, ensure the YouTube link
+is accessible in your browser and that your network allows access to YouTube.
+Upgrading `pytube` to the latest version may also resolve transient issues when
+fetching video streams.
+
