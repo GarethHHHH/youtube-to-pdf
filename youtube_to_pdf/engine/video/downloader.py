@@ -18,9 +18,12 @@ class Downloader:
             print_progress_bar(int(progress), 100, prefix='Download:', suffix='Complete',
                                length=50)
 
-        youtube = YouTube(video.url, on_progress_callback=progress_function)
-        stream = youtube.streams.filter(adaptive=True).first()
-        stream.download(settings.UPLOADING_DIR, file_md5sum)
+        try:
+            youtube = YouTube(video.url, on_progress_callback=progress_function)
+            stream = youtube.streams.filter(adaptive=True).first()
+            stream.download(settings.UPLOADING_DIR, file_md5sum)
+        except Exception as exc:
+            raise RuntimeError("Failed to download video") from exc
 
         file_md5sum = helper.move_video_to(
             os.path.join(settings.UPLOADING_DIR, file_md5sum + ".mp4"),
