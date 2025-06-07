@@ -1,4 +1,4 @@
-from flask_restplus import Api
+from flask_restx import Api
 
 from .conversion import api as migration_api
 

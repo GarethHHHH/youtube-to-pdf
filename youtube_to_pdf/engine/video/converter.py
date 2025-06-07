@@ -1,7 +1,7 @@
 import logging
 import os
 
-from cv2 import cv2
+import cv2
 
 from youtube_to_pdf import settings
 from youtube_to_pdf.models.video import Video
