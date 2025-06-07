@@ -16,7 +16,7 @@ with the help of some frameworks (eg.: pytube), youtube-to-pdf-converter does th
 
 ## Requirements
 
-- Install Python (although that's probably installed already on your system)
+- Install Python **3.13.4** (although that's probably installed already on your system)
 
 - Install pipenv: https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv 
 (you may need to add $HOME/.local/bin to $PATH and reboot for pipenv to be recognized as a system command)
