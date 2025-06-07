@@ -68,15 +68,15 @@
                 "sha256:45eb5a6fd193d6cf7e0cf5d8a5b31f83d5faae0293695626f539a823e93b13f6"
             ],
             "index": "pypi",
-            "version": "==1.1.1"
+            "version": "==2.3.2"
         },
-        "flask-restplus": {
+        "flask-restx": {
             "hashes": [
                 "sha256:a15d251923a8feb09a5d805c2f4d188555910a42c64d58f7dd281b8cac095f1b",
                 "sha256:a66e442d0bca08f389fc3d07b4d808fc89961285d12fb8013f7cf15516fa9f5c"
             ],
             "index": "pypi",
-            "version": "==0.13.0"
+            "version": "==0.5.1"
         },
         "fpdf": {
             "hashes": [
@@ -256,7 +256,7 @@
                 "sha256:ff314db7536cce2ea88a37d060c9eaf8a00f2e465671e571582cf1a614e02b75"
             ],
             "index": "pypi",
-            "version": "==3.4.7.28"
+            "version": "==4.8.0"
         },
         "pkgutil-resolve-name": {
             "hashes": [
@@ -300,7 +300,7 @@
                 "sha256:9a7fb9091e1ad39d6a4f2f68864bf28b71ad58d781f7b476b53e95c493873998"
             ],
             "index": "pypi",
-            "version": "==9.5.2"
+            "version": "==12.1.0"
         },
         "pytz": {
             "hashes": [
