@@ -20,7 +20,15 @@ class Downloader:
 
         try:
             youtube = YouTube(video.url, on_progress_callback=progress_function)
-            stream = youtube.streams.filter(adaptive=True).first()
+            stream = (
+                youtube.streams
+                .filter(progressive=True, file_extension="mp4")
+                .order_by("resolution")
+                .desc()
+                .first()
+            )
+            if stream is None:
+                raise RuntimeError("No suitable stream found")
             stream.download(settings.UPLOADING_DIR, file_md5sum)
         except Exception as exc:
             raise RuntimeError("Failed to download video") from exc

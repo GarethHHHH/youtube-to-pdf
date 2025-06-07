@@ -1,4 +1,5 @@
 import re
+from urllib.parse import unquote
 
 import requests
 
@@ -8,6 +9,7 @@ _VIDEO_ID_RE = re.compile(r"(?:v=|/)([0-9A-Za-z_-]{11})")
 
 def clean_url(value: str) -> str:
     """Return a normalized long-form YouTube watch URL."""
+    value = unquote(value)
     match = _VIDEO_ID_RE.search(value)
     if not match:
         raise ValueError("Invalid YouTube URL")
